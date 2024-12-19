@@ -1,0 +1,50 @@
+body {
+    height: 100vh;
+    width: 100vw;
+    background-color: #E3C1A3;
+}
+
+
+.stripe{
+    background-color: #A58365;
+    height: 140vh;
+    width: 40px;
+    position: absolute;
+}
+.leftVleft {
+    transform: rotate(-25deg);
+    right: 40vw;
+    bottom: -10vh;
+}
+
+.leftVright {
+    transform: rotate(-25deg);
+    right: 35vw;
+    bottom: -10vh;
+}
+
+.rightVleft {
+    transform: rotate(25deg);
+    right: 10vw;
+    bottom: -10vh;
+}
+
+.rightVright {
+    transform: rotate(25deg);
+    right: 5vw;
+    bottom: -10vh;
+}
+
+
+
+.texto-principal{
+    width: 40vw;
+    margin: 20vh 5vw 10vh;
+    color: #634D3A;
+}
+
+.texto-principalmas{
+    width: 35vw;
+    margin: 0 5vw 10vh;
+    color: #634D3A;
+}

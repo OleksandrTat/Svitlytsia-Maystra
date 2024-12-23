@@ -48,3 +48,25 @@ body {
     margin: 0 5vw 10vh;
     color: #634D3A;
 }
+
+
+.btn{
+    width: 20vw;
+    height: 3.5em;
+    margin-left: 5vw;
+    background-color: #A58365;
+    color: white;
+    border: 0;
+}
+
+.imgPrincimales{
+    height: 90%;
+    position: absolute;
+    top: 0vh;
+    right: 10vw;
+}
+
+
+.logoNavbar{
+    margin-bottom: 0;
+}

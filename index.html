@@ -1,9 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ua">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+
+    <title>Світлиця майстра</title>
+    <link rel="icon" href="img/LOGO.png" type="image/x-icon">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
@@ -16,20 +19,17 @@
 </head>
 <body>
 
-  <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top navbarTop navbarcss">
+  <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top navbarTop navbarcss ubuntu-medium">
     <div class="container-fluid navbarcss">
-        <!-- Logo en la izquierda -->
         <img src="img/LOGO.png" alt="Bootstrap" width="30" height="30">
         <img src="img/textSinBG.png" alt="Bootstrap" class="textlogo" height="30">
         
-        <!-- Botón para móviles -->
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         
-        <!-- Elementos del menú -->
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                <ul class="navbar-nav ms-auto navItem"> <!-- ms-auto alinea los elementos a la derecha -->
+                <ul class="navbar-nav ms-auto navItem">
                     <li class="nav-item navItem">
                         <a class="nav-link active" aria-current="page" href="#">Про нас</a>
                     </li>
@@ -58,9 +58,7 @@
                 </ul>
             </div>
         </div>
-    </nav>
-
-
+  </nav>
 
     <div> <!-- елемети на початку -->
         <h2 class="ubuntu-bold texto-principal">Ми з гордістю продовжуємо справу своїх дідів-прадідів. </h2>
@@ -78,10 +76,29 @@
 
         <img src="img/img principales.png" class="imgPrincimales">
     </div>
-     
-    <div class="mainbg">
-      
+    
+    <div>  <!-- задній фон -->
+      <div class="separador"></div>
+      <img src="img/waveprincipal.png" style="height: 40px; width: 100vw; position: absolute; top: 100svh;">
+      <div class="mainbg"></div>
     </div>
 
+    <div class="container">
+        <div class="row1">
+          <div class="col-6 aboutUsImg">
+            <img src="img/aboutUs.png">
+          </div>
+          <div class="container">
+            <div class="row1">
+              <div class="col-6 aboutUsImg">
+                <div class="container">
+                  <h2 class="row1 col-12 ubuntu-bold mainTextAboutUs">Про нас</h2>
+                  <div class="row2 separadorAboutUs"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
 </body>
 </html>

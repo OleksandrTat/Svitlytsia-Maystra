@@ -7,6 +7,10 @@ body {
     overflow-x: hidden;
 }
 
+.textlogo{
+    margin-top: 5px;
+    margin-left: -20px;
+}
 
 .stripe{
     background-color: #A58365;
@@ -80,5 +84,38 @@ body {
     height: 400vw;
     background-color: #FFEDE2;
     position: absolute;
-    top: 100vh;
+    top: 104vh;
+}
+
+
+.separador{
+    height: 0.8em;
+    width: 60vw;
+    background-color: #FFEDE2;
+    border-radius: 10em;
+    position: absolute;
+    top: 96vh;
+    left: 20vw;
+}
+
+.aboutUsImg{
+    position: relative;
+    top: 50vh;
+    left: 10vw;
+    float: left;
+}
+
+.separadorAboutUs{
+    height: 1.2vh;
+    width: 75%;
+    border-radius: 3em;
+    background-color: #C2845D;
+    float: right; 
+    margin-right: 20vw;
+}
+
+.mainTextAboutUs{
+    width: auto;
+    position: relative;
+    right: -12vw;
 }

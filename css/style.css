@@ -1,7 +1,10 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+
 body {
-    height: 100vh;
-    width: 100vw;
+    height: 400vh;
+    width: 100dvw;
     background-color: #E3C1A3;
+    overflow-x: hidden;
 }
 
 
@@ -11,25 +14,25 @@ body {
     width: 40px;
     position: absolute;
 }
-.leftVleft {
+.leftVleft{
     transform: rotate(-25deg);
     right: 40vw;
     bottom: -10vh;
 }
 
-.leftVright {
+.leftVright{
     transform: rotate(-25deg);
     right: 35vw;
     bottom: -10vh;
 }
 
-.rightVleft {
+.rightVleft{
     transform: rotate(25deg);
     right: 10vw;
     bottom: -10vh;
 }
 
-.rightVright {
+.rightVright{
     transform: rotate(25deg);
     right: 5vw;
     bottom: -10vh;
@@ -67,6 +70,15 @@ body {
 }
 
 
-.logoNavbar{
-    margin-bottom: 0;
+
+.navbarcss{
+    background-color: #E3C1A3 !important;
+}
+
+.mainbg{
+    width: 100vw;
+    height: 400vw;
+    background-color: #FFEDE2;
+    position: absolute;
+    top: 100vh;
 }

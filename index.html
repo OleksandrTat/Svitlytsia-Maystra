@@ -17,10 +17,12 @@
     
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/fonts.css">
+    <script src="js/main.js"></script>
+    <!-- <script src="js/idiomas.js"></script> -->
 </head>
 <body>
 
-  <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top navbarTop navbarcss ubuntu-medium">
+<nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top navbarTop navbarcss ubuntu-medium">
     <div class="container-fluid navbarcss">
         <img src="img/LOGO.png" alt="Bootstrap" width="30" height="30">
         <img src="img/textSinBG.png" alt="Bootstrap" class="textlogo" height="30">
@@ -29,43 +31,42 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         
-            <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                <ul class="navbar-nav ms-auto navItem">
-                    <li class="nav-item navItem">
-                        <a class="nav-link active" aria-current="page" href="#">Про нас</a>
-                    </li>
-                    <li class="nav-item navItem">
-                        <a class="nav-link" href="#">Каталог</a>
-                    </li>
-                    <li class="nav-item navItem">
-                        <a class="nav-link" href="#">Чому ми</a>
-                    </li>
-                    <li class="nav-item navItem">
-                      <a class="nav-link" href="#">Історія</a>
-                    </li>
-                    <li class="nav-item navItem">
-                      <a class="nav-link" href="#">Контакти</a>
-                    </li>
-                    <li class="nav-item dropdown navItem">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                          <i class="bi bi-globe2"></i>
-                        </a>
-                        <ul class="dropdown-menu dropdown-menu-end" style="margin-right: 0px !important;">
-                            <li><a class="dropdown-item" href="#">Українська</a></li>
-                            <li><a class="dropdown-item" href="#">Español</a></li>
-                            <li><a class="dropdown-item" href="#">English</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav ms-auto navItem">
+                <li class="nav-item navItem">
+                    <a class="nav-link active" aria-current="page" href="#about-us">Про нас</a>
+                </li>
+                <li class="nav-item navItem">
+                    <a class="nav-link" href="#">Каталог</a>
+                </li>
+                <li class="nav-item navItem">
+                    <a class="nav-link" href="#">Чому ми</a>
+                </li>
+                <li class="nav-item navItem">
+                    <a class="nav-link" href="#">Історія</a>
+                </li>
+                <li class="nav-item navItem">
+                    <a class="nav-link" href="#">Контакти</a>
+                </li>
+                <li class="nav-item dropdown navItem">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      <i class="bi bi-globe2"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end" style="margin-right: 0px !important;">
+                        <li><a class="dropdown-item" onclick="setLanguage('ua')">Українська</a></li>
+                        <li><a class="dropdown-item" onclick="setLanguage('es')">Español</a></li>
+                        <li><a class="dropdown-item" onclick="setLanguage('en')">English</a></li>
+                    </ul>
+                </li>
+            </ul>
         </div>
-  </nav>
+    </div>
+</nav>
+
 
     <div> <!-- елемети на початку -->
         <h2 class="ubuntu-bold texto-principal">Ми з гордістю продовжуємо справу своїх дідів-прадідів. </h2>
-        <h6 class="ubuntu-medium texto-principalmas">Використовуючи сучасні технології обробки деревини. Покладаємось на свій власний досвід роботи та проектуємо нові вироби.
-
-            Велику частину продукції ми виготовляємо на замовлення – тому індивідуальний підхід є ключовим фактором вдалих взаємин із клієнтами. З огляду на побажання замовників, ми створюємо дійсно якісні, сучасні і практичні меблі.</h6>
+        <h6 class="ubuntu-medium texto-principalmas">Використовуючи сучасні технології обробки деревини. Покладаємось на свій власний досвід роботи та проектуємо нові вироби. Велику частину продукції ми виготовляємо на замовлення – тому індивідуальний підхід є ключовим фактором вдалих взаємин із клієнтами. З огляду на побажання замовників, ми створюємо дійсно якісні, сучасні і практичні меблі.</h6>
         <div class="VV">
             <div class="leftVleft stripe"></div>
             <div class="leftVright stripe"></div>
@@ -84,7 +85,7 @@
       <div class="mainbg"></div>
     </div>
 
-    <div class="container aboutUs my-5">
+    <div class="container aboutUs my-5" id="about-us">
       <div class="row align-items-center offset-2">
         <!-- Блок із зображенням -->
         <div class="col-12 col-md-4 text-center d-flex justify-content-center">
@@ -108,10 +109,5 @@
         </div>
       </div>
     </div>
-    
-    
-    
-    
-    
 </body>
 </html>

@@ -81,6 +81,53 @@ body {
     background-color: #E3C1A3 !important;
 }
 
+
+
+/* Стиль для самого випадаючого меню */
+.navbar .dropdown-menu {
+    background-color: #FFEDE2;  /* світлий фон меню */
+    border-radius: 10px;  /* заокруглені кути меню */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);  /* легка тінь для ефекту */
+    padding: 10px 0;  /* відступи в середині */
+}
+
+/* Стиль для елементів випадаючого меню */
+.navbar .dropdown-item {
+    padding: 10px 20px;  /* відступи для кожного елемента */
+    margin-top: 5px;
+    color: #634D3A;  /* темний текст */
+    font-size: 1rem;  /* розмір шрифту */
+    border-radius: 5px;  /* заокруглені кути */
+    transition: background-color 0.3s, color 0.3s;  /* плавна зміна фону та кольору */
+}
+
+/* Стиль для елементів випадаючого меню при наведенні */
+.navbar .dropdown-item:hover {
+    background-color: #A58365;  /* темний фон при наведенні */
+    color: white;  /* білий текст при наведенні */
+}
+
+/* Стиль для активного елемента */
+.navbar .dropdown-item.active {
+    background-color: #C2845D;  /* активний елемент з темним фоном */
+    color: white;  /* білий текст */
+}
+
+/* Стиль для кнопки з активною мовою */
+.navbar .dropdown-toggle.active {
+    background-color: #C2845D;  /* фон для активної мови */
+}
+
+/* Стиль для елементів меню для вибраної мови */
+.navbar .dropdown-item.selected {
+    background-color: #A58365;  /* фон для вибраної мови */
+    color: white;  /* білий текст для вибраної мови */
+}
+
+
+
+
+
 .mainbg{
     width: 100vw;
     height: 400vw;

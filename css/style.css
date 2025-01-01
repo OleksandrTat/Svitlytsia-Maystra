@@ -2,9 +2,11 @@
 
 body {
     height: 400vh;
-    width: 100dvw;
+    width: 100%;
     background-color: #E3C1A3;
     overflow-x: hidden;
+    scrollbar-width: thin;
+    scrollbar-color: #A58365 #FFEDE2;
 }
 
 .textlogo{
@@ -88,34 +90,49 @@ body {
 }
 
 
-.separador{
-    height: 0.8em;
-    width: 60vw;
-    background-color: #FFEDE2;
-    border-radius: 10em;
-    position: absolute;
-    top: 96vh;
-    left: 20vw;
-}
-
-.aboutUsImg{
+.aboutUs{
     position: relative;
-    top: 50vh;
-    left: 10vw;
-    float: left;
+    top: 60vh;
 }
 
-.separadorAboutUs{
-    height: 1.2vh;
-    width: 75%;
-    border-radius: 3em;
+
+.AboutUsH2{
+    color: #634D3A;
+    margin-right: 5px;
+}
+
+.AboutUsP {
+    color: #634D3A;
+    line-height: 1.5em;
+    text-align: justify;
+}
+
+.AboutUsSeparador{
+    height: 0.5em;
+    width: 100%;
     background-color: #C2845D;
-    float: right; 
-    margin-right: 20vw;
+    border-radius: 3em;
 }
 
-.mainTextAboutUs{
-    width: auto;
-    position: relative;
-    right: -12vw;
+
+
+
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #FFEDE2;
+  border-radius:  0px 10px 10px 0px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #E3C1A3;
+  border-radius: 10px;
+  border: 2px solid #FFEDE2;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #e8ba93;
 }

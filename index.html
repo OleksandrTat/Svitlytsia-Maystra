@@ -23,45 +23,56 @@
 <body>
 
   <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top navbarTop navbarcss ubuntu-medium">
-      <div class="container-fluid navbarcss">
-          <img src="img/LOGO.png" alt="Bootstrap" width="30" height="30">
-          <img src="img/textSinBG.png" alt="Bootstrap" class="textlogo" height="30">
-          
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-          </button>
-          
-          <div class="collapse navbar-collapse" id="navbarNavDropdown">
-              <ul class="navbar-nav ms-auto navItem">
-                  <li class="nav-item navItem">
-                      <a class="nav-link active" aria-current="page" href="#about-us">Про нас</a>
-                  </li>
-                  <li class="nav-item navItem">
-                      <a class="nav-link" href="#">Каталог</a>
-                  </li>
-                  <li class="nav-item navItem">
-                      <a class="nav-link" href="#">Чому ми</a>
-                  </li>
-                  <li class="nav-item navItem">
-                      <a class="nav-link" href="#">Історія</a>
-                  </li>
-                  <li class="nav-item navItem">
-                      <a class="nav-link" href="#">Контакти</a>
-                  </li>
-                  <li class="nav-item dropdown navItem">
-                      <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    <div class="container-fluid navbarcss">
+        <!-- Лого з посиланням на верх сторінки -->
+        <a href="#principio">
+            <img src="img/LOGO.png" alt="Bootstrap" width="30" height="30">
+        </a>
+        <a href="#principio">
+            <img src="img/textSinBG.png" alt="Bootstrap" class="textlogo" height="30">
+        </a>
+        
+        <!-- Кнопка для мобільної версії -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <!-- Меню -->
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav ms-auto navItem">
+                <li class="nav-item navItem">
+                    <a class="nav-link active" aria-current="page" href="#about-us">Про нас</a>
+                </li>
+                <li class="nav-item navItem">
+                    <a class="nav-link" href="#comprar">Каталог</a>
+                </li>
+                <li class="nav-item navItem">
+                    <a class="nav-link" href="#">Чому ми</a>
+                </li>
+                <li class="nav-item navItem">
+                    <a class="nav-link" href="#">Історія</a>
+                </li>
+                <li class="nav-item navItem">
+                    <a class="nav-link" href="#">Контакти</a>
+                </li>
+                <li class="nav-item dropdown navItem">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         <i class="bi bi-globe2"></i>
-                      </a>
-                      <ul class="dropdown-menu dropdown-menu-end" style="margin-right: 0px !important;">
-                          <li><a class="dropdown-item" onclick="setLanguage('ua')">Українська</a></li>
-                          <li><a class="dropdown-item" onclick="setLanguage('es')">Español</a></li>
-                          <li><a class="dropdown-item" onclick="setLanguage('en')">English</a></li>
-                      </ul>
-                  </li>
-              </ul>
-          </div>
-      </div>
-  </nav>
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end" style="margin-right: 0px !important;">
+                        <li><a class="dropdown-item" onclick="setLanguage('ua')">Українська</a></li>
+                        <li><a class="dropdown-item" onclick="setLanguage('es')">Español</a></li>
+                        <li><a class="dropdown-item" onclick="setLanguage('en')">English</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Ваша секція на верху -->
+<div id="principio"></div>
+
 
 
   <div> <!-- елемети на початку -->
@@ -74,7 +85,7 @@
               <div class="rightVleft stripe"></div>
               <div class="rightVright stripe"></div>
           </div>
-          <button type="button" class="ubuntu-bold btn btn-outline-light btn-lg">Детальніше</button>
+          <button type="button" class="ubuntu-bold btn btn-outline-light btn-lg btnPrincipal">Детальніше</button>
 
           <img src="img/img principales.png" class="imgPrincimales">
   </div>
@@ -109,5 +120,49 @@
         </p>
       </div>
     </div>
+
+
+    <div>    <!-- Замовити -->
+      <div>
+        <img class="bgComprar" id="comprar" src="img/bgComprar.png" alt="Замовити" >
+        <button type="button" class="btn btn-outline-secondary btnComprar ubuntu-medium">Замовити</button>
+      </div>
+
+      <div class="image-container">
+        <a href="https://example.com/doors" class="image-box doors" target="_blank">
+          <img src="img/puertas.png" alt="Двері">
+          <div class="overlay">
+            <span>Двері</span>
+          </div>
+        </a>
+        <a href="https://example.com/cabinet" class="image-box" target="_blank">
+          <img src="img/muebles.png" alt="Меблі">
+          <div class="overlay">
+            <span>Меблі</span>
+          </div>
+        </a>
+        <a href="https://example.com/playhouses" class="image-box" target="_blank">
+          <img src="img/gardin.png" alt="Будиночки">
+          <div class="overlay">
+            <span>Будиночки</span>
+          </div>
+        </a>
+        <a href="https://example.com/bed" class="image-box" target="_blank">
+          <img src="img/Camas.png" alt="Ліжка">
+          <div class="overlay">
+            <span>Ліжка</span>
+          </div>
+        </a>
+        <a href="https://example.com/kitchens" class="image-box" target="_blank">
+          <img src="img/Cocinas.png" alt="Кухні">
+          <div class="overlay">
+            <span>Кухні</span>
+          </div>
+        </a>
+      </div>
+      
+      
+    </div>
+    
 </body>
 </html>

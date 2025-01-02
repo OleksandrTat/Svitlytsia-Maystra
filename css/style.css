@@ -17,64 +17,89 @@ body {
 .stripe{
     background-color: #A58365;
     height: 140vh;
-    width: 40px;
+    width: 2em;
     position: absolute;
+    bottom: -6em;
 }
 .leftVleft{
     transform: rotate(-25deg);
-    right: 40vw;
-    bottom: -10vh;
+    right: 26em;
 }
 
 .leftVright{
     transform: rotate(-25deg);
-    right: 35vw;
-    bottom: -10vh;
+    right: 30em;
 }
 
 .rightVleft{
     transform: rotate(25deg);
-    right: 10vw;
-    bottom: -10vh;
+    right: 7em;
 }
 
 .rightVright{
     transform: rotate(25deg);
-    right: 5vw;
-    bottom: -10vh;
-}
-
-
-
-.texto-principal{
-    width: 40vw;
-    margin: 20vh 5vw 10vh;
-    color: #634D3A;
-}
-
-.texto-principalmas{
-    width: 35vw;
-    margin: 0 5vw 10vh;
-    color: #634D3A;
-}
-
-
-.btn{
-    width: 20vw;
-    height: 3.5em;
-    margin-left: 5vw;
-    background-color: #A58365;
-    color: white;
-    border: 0;
+    right: 3em;
 }
 
 .imgPrincimales{
     height: 90%;
     position: absolute;
     top: 0vh;
-    right: 10vw;
+    right: 7vw;
 }
 
+.mainseparador{
+    width: 70vw;
+    height: 1.5vh;
+    border-radius: 1em;
+    background-color: #FFEDE2;
+    position: absolute;
+    left: 15vw;
+    bottom: 2vh;
+}
+
+.mainbg{
+    width: 100vw;
+    height: 400vw;
+    background-color: #FFEDE2;
+    position: absolute;
+    top: 104vh;
+}
+
+.texto-principal{
+    width: 16em;
+    margin: 17vh 5vw 10vh;
+    color: #634D3A;
+    font-size: 2.5em;
+}
+
+.darkbrown{
+    color: #3C332B;
+}
+
+.texto-principalmas{
+    width: 28em;
+    margin: 0 5vw 10vh;
+    color: #634D3A;
+}
+
+
+.btn{
+    width: 25vw;
+    height: 3em;
+    margin-left: 5vw;
+    background-color: #A58365;
+    color: #FFF1E4;
+    border: 0;
+    font-size: 1.5em;
+    border-radius: 1em;
+}
+
+
+.btn:hover {
+    background-color: #715741;
+    color: white;
+}
 
 
 .navbarcss{
@@ -128,15 +153,6 @@ body {
 
 
 
-.mainbg{
-    width: 100vw;
-    height: 400vw;
-    background-color: #FFEDE2;
-    position: absolute;
-    top: 104vh;
-}
-
-
 .aboutUs{
     position: relative;
     top: 60vh;
@@ -145,17 +161,24 @@ body {
 
 .AboutUsH2{
     color: #634D3A;
-    margin-right: 5px;
+    margin-right: 1em;
+    margin-top: -1em;
 }
 
-.AboutUsP {
+.AboutUsPTop {
     color: #634D3A;
     line-height: 1.5em;
-    text-align: justify;
+    margin: 0 1em;
+}
+
+.AboutUsPBottom {
+    color: #634D3A;
+    line-height: 1.5em;
+    margin: 1em 0;
 }
 
 .AboutUsSeparador{
-    height: 0.5em;
+    height: 0.4em;
     width: 100%;
     background-color: #C2845D;
     border-radius: 3em;

@@ -25,12 +25,13 @@
   <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top navbarTop navbarcss ubuntu-medium">
     <div class="container-fluid navbarcss">
         <!-- Лого з посиланням на верх сторінки -->
-        <a href="#principio">
-            <img src="img/LOGO.png" alt="Bootstrap" width="30" height="30">
+        <a href="#principio" class="logo-link">
+          <img src="img/LOGO.png" alt="Лого" width="30" height="30">
         </a>
-        <a href="#principio">
-            <img src="img/textSinBG.png" alt="Bootstrap" class="textlogo" height="30">
+        <a href="#principio" class="logo-link">
+            <img src="img/textSinBG.png" alt="Текст логотипу" class="textlogo" height="30">
         </a>
+      
         
         <!-- Кнопка для мобільної версії -->
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -44,16 +45,16 @@
                     <a class="nav-link active" aria-current="page" href="#about-us">Про нас</a>
                 </li>
                 <li class="nav-item navItem">
-                    <a class="nav-link" href="#comprar">Каталог</a>
+                    <a class="nav-link" aria-current="page" href="#comprar">Каталог</a>
                 </li>
                 <li class="nav-item navItem">
-                    <a class="nav-link" href="#">Чому ми</a>
+                    <a class="nav-link" aria-current="page" href="#diferencia">Чому ми</a>
                 </li>
                 <li class="nav-item navItem">
-                    <a class="nav-link" href="#">Історія</a>
+                    <a class="nav-link" aria-current="page" href="#">Історія</a>
                 </li>
                 <li class="nav-item navItem">
-                    <a class="nav-link" href="#">Контакти</a>
+                    <a class="nav-link" aria-current="page" href="#">Контакти</a>
                 </li>
                 <li class="nav-item dropdown navItem">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -68,14 +69,10 @@
             </ul>
         </div>
     </div>
-</nav>
+  </nav>
 
-<!-- Ваша секція на верху -->
-<div id="principio"></div>
-
-
-
-  <div> <!-- елемети на початку -->
+  <!-- Елемети на початку -->
+  <div>
           <h2 class="ubuntu-bold texto-principal">Ми з гордістю продовжуємо справу своїх <span class="darkbrown">дідів-прадідів.</span> </h2>
           <h6 class="ubuntu-medium texto-principalmas">Використовуючи сучасні технології обробки деревини. Покладаємось на свій власний досвід роботи та проектуємо нові вироби.<br><br>Велику частину продукції ми виготовляємо на замовлення – тому індивідуальний підхід є ключовим фактором вдалих взаємин із клієнтами. З огляду на побажання замовників, ми створюємо дійсно <span class="darkbrown">якісні, сучасні і практичні меблі.</span></h6>
           <div class="VV">
@@ -89,14 +86,16 @@
 
           <img src="img/img principales.png" class="imgPrincimales">
   </div>
-      
-  <div>  <!-- задній фон -->
+
+  <!-- Задній фон -->   
+  <div>
         <div class="mainseparador"></div>
         <img src="img/waveprincipal.png" style="height: 40px; width: 100vw; position: absolute; top: 100svh;">
         <div class="mainbg"></div>
   </div>
 
-    <div class="container aboutUs my-5" id="about-us"> <!-- Про нас -->
+  <!-- Про нас -->
+  <div class="container aboutUs my-5" id="about-us">
       <div class="row align-items-center offset-2">
         <!-- Блок із зображенням -->
         <div class="col-12 col-md-4 text-center d-flex justify-content-center">
@@ -119,41 +118,41 @@
           Продукція відповідає необхідним стандартам. Здійснюємо співпрацю з відомими виробниками високоякісних комплектуючих.
         </p>
       </div>
-    </div>
+  </div>
 
-
-    <div>    <!-- Замовити -->
+  <!-- Зимовити -->
+  <div>
       <div>
-        <img class="bgComprar" id="comprar" src="img/bgComprar.png" alt="Замовити" >
-        <button type="button" class="btn btn-outline-secondary btnComprar ubuntu-medium">Замовити</button>
+        <img class="bgComprar hidden" id="comprar" src="img/bgComprar.png" alt="Замовити" >
+        <button type="button" class="btn btn-outline-secondary btnComprar ubuntu-medium hidden">Замовити</button>
       </div>
 
       <div class="image-container">
-        <a href="https://example.com/doors" class="image-box doors" target="_blank">
+        <a href="https://example.com/doors" class="image-box hidden" target="_blank">
           <img src="img/puertas.png" alt="Двері">
           <div class="overlay">
             <span>Двері</span>
           </div>
         </a>
-        <a href="https://example.com/cabinet" class="image-box" target="_blank">
+        <a href="https://example.com/cabinet" class="image-box hidden" target="_blank">
           <img src="img/muebles.png" alt="Меблі">
           <div class="overlay">
             <span>Меблі</span>
           </div>
         </a>
-        <a href="https://example.com/playhouses" class="image-box" target="_blank">
+        <a href="https://example.com/playhouses" class="image-box hidden" target="_blank">
           <img src="img/gardin.png" alt="Будиночки">
           <div class="overlay">
             <span>Будиночки</span>
           </div>
         </a>
-        <a href="https://example.com/bed" class="image-box" target="_blank">
+        <a href="https://example.com/bed" class="image-box hidden" target="_blank">
           <img src="img/Camas.png" alt="Ліжка">
           <div class="overlay">
             <span>Ліжка</span>
           </div>
         </a>
-        <a href="https://example.com/kitchens" class="image-box" target="_blank">
+        <a href="https://example.com/kitchens" class="image-box hidden" target="_blank">
           <img src="img/Cocinas.png" alt="Кухні">
           <div class="overlay">
             <span>Кухні</span>
@@ -162,7 +161,32 @@
       </div>
       
       
-    </div>
+  </div>
+
+  <!-- Чим ми відрізняємось -->
+  <div class="diferencia">
+      <img src="img/WhyWeAreDifferent/TopWave.png" class="diferenciaTopWave">
+      <div class="bg">
+        <div class="container" id="diferencia">
+          <div class="row hidden">
+            <!-- Блок із текстом -->
+          <div class="col-12 col-md-5 offset-2">
+            <h2 class="diferenciaH2 lxgw-wenkai-tc-regular fs-1 text-start mb-3">Чим ми відрізняємося</h2>
+            <div class="differenciaSeparador mb-4"></div>
+            <p class="fs-6 differenceP lxgw-wenkai-tc-regular mb-4">
+              "Світлиця Майстра" – ваш партнер у створенні дерев'яних меблів та дверей! Ми розробляємо надійні, довговічні вироби, які гармонійно поєднують стиль і функціональність, створюючи затишок у вашому просторі.<br><br>Наші переваги – це доступні ціни, швидка та надійна доставка, якісні матеріали й оперативність виконання замовлень. Обираючи "Світлицю Майстра", ви отримуєте не просто вироби, а справжню майстерність, яка служитиме вам довгі роки!
+              </p>
+          </div>
+  
+            <!-- Блок із зображенням -->
+          <div class="col-12 col-md-4 text-center d-flex justify-content-center">
+            <img src="img/WhyWeAreDifferent/mainimg.png" class="img-fluid" alt="Чим ми відрізняємося" style="height: 100%; max-height: 350px; object-fit: cover;">
+          </div>
+          </div>
+        </div>
+      </div>
+      <img src="img/WhyWeAreDifferent/BottomWave.png" class="diferenciaBottomWave">
+  </div>
     
 </body>
 </html>

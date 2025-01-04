@@ -97,7 +97,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const onScroll = () => {
         animatedElements.forEach((el) => {
             const rect = el.getBoundingClientRect();
-            const threshold = window.innerHeight * 0.2; // 30% області перегляду
+            const threshold = window.innerHeight * 0.4; // 30% області перегляду
 
             // Додати клас, коли 30% елемента знаходиться у вікні перегляду
             if (rect.top <= window.innerHeight - threshold && rect.bottom >= threshold) {
@@ -107,5 +107,5 @@ document.addEventListener("DOMContentLoaded", () => {
     };
 
     window.addEventListener("scroll", onScroll);
-    onScroll(); // Викликати при завантаженні сторінки
+    onScroll();
 });

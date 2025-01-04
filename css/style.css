@@ -2,7 +2,7 @@
 
 body {
     height: 400vh;
-    width: 100%;
+    width: 100vw;
     background-color: #E3C1A3;
     overflow-x: hidden;
     scrollbar-width: thin;
@@ -19,25 +19,27 @@ body {
     height: 140vh;
     width: 2em;
     position: absolute;
-    bottom: -8em;
+    bottom: -5em;
+    margin-right: 3em;
 }
+
 .leftVleft{
-    transform: rotate(-25deg);
+    transform: rotate(-20deg);
     right: 26em;
 }
 
 .leftVright{
-    transform: rotate(-25deg);
+    transform: rotate(-20deg);
     right: 30em;
 }
 
 .rightVleft{
-    transform: rotate(25deg);
+    transform: rotate(20deg);
     right: 7em;
 }
 
 .rightVright{
-    transform: rotate(25deg);
+    transform: rotate(20deg);
     right: 3em;
 }
 

@@ -112,3 +112,29 @@ function createSnowflake() {
 }
 
 setInterval(createSnowflake, 500);
+
+
+
+// Footer
+$(document).ready(function () {
+    $(".gallery-carousel").owlCarousel({
+        loop: true, // Зацикленість
+        margin: 0, // Відступи між елементами
+        autoplay: true, // Автопрокрутка
+        autoplayTimeout: 3000, // Період автопрокрутки
+        autoplayHoverPause: true, // Пауза при наведенні
+        nav: false, // Кнопки навігації
+        dots: false, // Показувати чи ні точки навігації
+        responsive: {
+            0: {
+                items: 4.5 // На мобільних по 1 елементу
+            },
+            600: {
+                items: 6.5 // На планшетах по 3 елементи
+            },
+            1000: {
+                items: 6.5 // На десктопах по 5 елементів
+            }
+        }
+    });
+});

@@ -1,9 +1,13 @@
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     width: 100vw;
     height: auto !important;
-    background-color: #E3C1A3;
+    background-color: #FFEDE2;
     overflow-x: hidden;
     scrollbar-width: thin;
     scrollbar-color: #A58365 #FFEDE2;
@@ -65,10 +69,18 @@ body {
 
 .mainbg{
     width: 100vw;
-    height: 650vh;
-    background-color: #FFEDE2;
+    height: 100vh;
+    background-color: #E3C1A3;
     position: absolute;
-    top: 104vh;
+    top: 0;
+    z-index: -1;
+}
+.VVbg{
+    width: 100vw;
+    height: 10vh;
+    background: #FFEDE2;
+    position: absolute;
+    top: 100vh;
 }
 
 .texto-principal{
@@ -287,7 +299,6 @@ a {
     justify-content: space-evenly;
     align-items: flex-start;
     flex-wrap: wrap;
-    background-color: #fbeae1;
     padding: 20px;
 }
 
@@ -442,7 +453,7 @@ a {
 
 
 /* Базовий стиль для зображень */
-.gallery-carousel .item img {
+/* .gallery-carousel .item img {
     display: block;
     height: auto;
     aspect-ratio: 1 / 1;
@@ -465,7 +476,7 @@ a {
 
 .owl-stage {
     display: flex;
-}
+} */
 
 
 
@@ -534,3 +545,66 @@ footer .text-body-secondary{
     animation-duration: 10s;
 }
 
+
+
+
+
+
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .waves {
+    position:relative;
+    width: 100%;
+    height:15vh;
+    margin-bottom:-7px;
+    min-height:100px;
+    max-height:150px;
+  }
+  
+  /* Animation */
+  
+  .parallax > use {
+    animation: move-forever 25s cubic-bezier(.55,.5,.45,.5)     infinite;
+  }
+  .parallax > use:nth-child(1) {
+    animation-delay: -2s;
+    animation-duration: 7s;
+  }
+  .parallax > use:nth-child(2) {
+    animation-delay: -3s;
+    animation-duration: 10s;
+  }
+  .parallax > use:nth-child(3) {
+    animation-delay: -4s;
+    animation-duration: 13s;
+  }
+  .parallax > use:nth-child(4) {
+    animation-delay: -5s;
+    animation-duration: 20s;
+  }
+  @keyframes move-forever {
+    0% {
+     transform: translate3d(-90px,0,0);
+    }
+    100% { 
+      transform: translate3d(85px,0,0);
+    }
+  }
+  /*Shrinking for mobile*/
+  @media (max-width: 768px) {
+    .waves {
+      height:40px;
+      min-height:40px;
+    }
+    .content {
+      height:30vh;
+    }
+    h1 {
+      font-size:24px;
+    }
+  }

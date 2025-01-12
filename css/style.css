@@ -175,22 +175,13 @@ a {
 .navbar .dropdown-item:hover {
     background-color: #A58365;  /* темний фон при наведенні */
     color: white;  /* білий текст при наведенні */
+    cursor: pointer;
 }
 
-.navbar .dropdown-item.active {
-    background-color: #C2845D;  /* активний елемент з темним фоном */
+.navbar .dropdown-item-active {
+    background-color: #b79170;  /* активний елемент з темним фоном */
     color: white;  /* білий текст */
 }
-
-.navbar .dropdown-toggle.active {
-    background-color: #C2845D;  /* фон для активної мови */
-}
-
-.navbar .dropdown-item.selected {
-    background-color: #A58365;  /* фон для вибраної мови */
-    color: white;  /* білий текст для вибраної мови */
-}
-
 
 
 

@@ -53,16 +53,16 @@
           <div class="collapse navbar-collapse" id="navbarNavDropdown">
               <ul class="navbar-nav ms-auto navItem">
                 <li class="nav-item navItem">
-                  <a id="aboutLink" class="nav-link active" onclick="window.open('/index_es.html', '_blank');">Quiénes somos</a>
+                  <a id="aboutLink" class="nav-link active" onclick="window.open('/index_es.html', '_self');">Quiénes somos</a>
                 </li>
                 <li class="nav-item navItem">
-                    <a id="showcaseLink" class="nav-link" onclick="window.open('/index_es.html', '_blank');">Escaparate</a>
+                    <a id="showcaseLink" class="nav-link" onclick="window.open('/index_es.html', '_self');">Escaparate</a>
                 </li>
                 <li class="nav-item navItem">
-                    <a id="whyUsLink" class="nav-link" onclick="window.open('/index_es.html', '_blank');">Por qué nosotros</a>
+                    <a id="whyUsLink" class="nav-link" onclick="window.open('/index_es.html', '_self');">Por qué nosotros</a>
                 </li>
                 <li class="nav-item navItem">
-                    <a id="historyLink" class="nav-link" onclick="window.open('/index_es.html', '_blank');">Historia</a>
+                    <a id="historyLink" class="nav-link" onclick="window.open('/index_es.html', '_self');">Historia</a>
                 </li>
                 <li class="nav-item navItem">
                     <a id="contactsLink" class="nav-link" href="#contacts">Contactos</a>
@@ -122,7 +122,7 @@ function createImageBlocks() {
 
         const link = document.createElement('a'); // Створюємо посилання
         link.href = `${imagePath}${i}.jpeg`; // Встановлюємо посилання на зображення
-        link.target = '_blank'; // Відкривається в новій вкладці
+        link.target = '_self'; // Відкривається в новій вкладці
 
         const img = document.createElement('img'); // Створюємо елемент зображення
         img.src = `${imagePath}${i}.jpeg`; // Встановлюємо джерело зображення
@@ -172,10 +172,10 @@ document.addEventListener('DOMContentLoaded', createImageBlocks);
         <div class="col-6 col-md-3 mb-3 offset-1">
           <h5 class="ubuntu-medium" id="contacts">Contactos</h5>
           <ul class="nav flex-column ">
-            <li class="nav-item mb-2 mt-2"><a href="https://www.google.com/maps/place/Muzey+%22Svitlytsya+Maystra%22/@49.5088589,25.350497,15.88z/data=!4m6!3m5!1s0x473047b833a6eb35:0x420c8db1d557e8f3!8m2!3d49.5133943!4d25.3479571!16s%2Fg%2F11qh1j7_np?entry=ttu&g_ep=EgoyMDI1MDEwNi4xIKXMDSoASAFQAw%3D%3D"  target="_blank" rel="noopener noreferrer" class="nav-link p-0 text-body-secondary">Tataryn, PE, pueblo de Slobidka,<br> distrito de Koziv, región de Ternopil.</a></li>
-            <li class="nav-item mb-2 mt-1"><a href="tel:097-159-39-57" target="_blank" rel="noopener noreferrer" class="nav-link p-0 text-body-secondary">097-159-39-57 (cocinas, dormitorios, armarios)<br>097-798-30-88 (puertas y ventanas, productos de jardinería)</a></li>
-            <li class="nav-item mb-2 mt-1"><a href="tataryntm@ukr.net" target="_blank" rel="noopener noreferrer" class="nav-link p-0 text-body-secondary">tataryntm@ukr.net</a></li>
-            <li class="nav-item mb-2 mt-1"><a href="#" target="_blank" rel="noopener noreferrer" class="nav-link p-0 text-body-secondary"><i class="bi bi-facebook"></i> Facebook</a></li>
+            <li class="nav-item mb-2 mt-2"><a href="https://www.google.com/maps/place/Muzey+%22Svitlytsya+Maystra%22/@49.5088589,25.350497,15.88z/data=!4m6!3m5!1s0x473047b833a6eb35:0x420c8db1d557e8f3!8m2!3d49.5133943!4d25.3479571!16s%2Fg%2F11qh1j7_np?entry=ttu&g_ep=EgoyMDI1MDEwNi4xIKXMDSoASAFQAw%3D%3D"  target="_self" rel="noopener noreferrer" class="nav-link p-0 text-body-secondary">Tataryn, PE, pueblo de Slobidka,<br> distrito de Koziv, región de Ternopil.</a></li>
+            <li class="nav-item mb-2 mt-1"><a href="tel:097-159-39-57" target="_self" rel="noopener noreferrer" class="nav-link p-0 text-body-secondary">097-159-39-57 (cocinas, dormitorios, armarios)<br>097-798-30-88 (puertas y ventanas, productos de jardinería)</a></li>
+            <li class="nav-item mb-2 mt-1"><a href="tataryntm@ukr.net" target="_self" rel="noopener noreferrer" class="nav-link p-0 text-body-secondary">tataryntm@ukr.net</a></li>
+            <li class="nav-item mb-2 mt-1"><a href="#" target="_self" rel="noopener noreferrer" class="nav-link p-0 text-body-secondary"><i class="bi bi-facebook"></i> Facebook</a></li>
           </ul>
         </div>
   

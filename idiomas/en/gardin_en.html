@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="ua">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Світлиця майстра</title>
+    <link rel="icon" href="/img/LOGO.png" type="image/x-icon">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=LXGW+WenKai+TC&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/choose.css">
+    <link rel="stylesheet" href="/css/fonts.css">
+    <link rel="stylesheet" href="/css/gallery.css">
+    <script src="/js/main.js"></script>
+    <script src="/js/choose.js"></script>
+</head>
+<body>
+
+  <!-- Сніг -->
+    <div id="snowflakes"></div>
+
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top navbarTop navbarcss ubuntu-medium">
+      <div class="container-fluid navbarcss">
+          <!-- Лого з посиланням на верх сторінки -->
+          <a href="/index_en.html" class="logo-link">
+            <img src="/img/LOGO.png" alt="Лого" width="30" height="30">
+          </a>
+          <a href="/index_en.html" class="logo-link">
+              <img src="/img/textSinBG.png" alt="Текст логотипу" class="textlogo" height="30">
+          </a>
+        
+          
+          <!-- Кнопка для мобільної версії -->
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+          
+          <!-- Меню -->
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+              <ul class="navbar-nav ms-auto navItem">
+                <li class="nav-item navItem">
+                  <a id="aboutLink" class="nav-link active" onclick="window.open('/index_en.html', '_blank');">About us</a>
+                </li>
+                <li class="nav-item navItem">
+                    <a id="showcaseLink" class="nav-link" onclick="window.open('/index_en.html', '_blank');">Showcase</a>
+                </li>
+                <li class="nav-item navItem">
+                    <a id="whyUsLink" class="nav-link" onclick="window.open('/index_en.html', '_blank');">Why we</a>
+                </li>
+                <li class="nav-item navItem">
+                    <a id="historyLink" class="nav-link" onclick="window.open('/index_en.html', '_blank');">History</a>
+                </li>
+                <li class="nav-item navItem">
+                    <a id="contactsLink" class="nav-link" href="#contacts">Contacts</a>
+                </li>
+                  <li class="nav-item dropdown navItem">
+                      <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          <i class="bi bi-globe2"></i>
+                      </a>
+                      <ul class="dropdown-menu dropdown-menu-end" style="margin-right: 0px !important;">
+                          <li><a class="dropdown-item" href="../ua/Chose.html">Українська</a></li>
+                          <li><a class="dropdown-item" href="../es/Chose_es.html">Español</a></li>
+                          <li><a class="dropdown-item">English</a></li>
+                      </ul>
+                  </li>
+              </ul>
+          </div>
+      </div>
+    </nav>
+
+  
+    <div class="container" id="imageContainer"></div>
+
+
+  <!-- Текст -->
+  <h3 class="sectext ubuntu-bold text-center">category</h3>
+  <h1 class="maintext ubuntu-bold text-center">Garden</h1>
+
+  <!-- Галерея -->
+  <div class="external">
+    <div class="horizontal-scroll-wrapper" id="image-container">
+    </div>
+  </div>
+
+<script>
+function createImageBlocks() {
+    const imageContainer = document.getElementById('image-container');
+    const imagePath = '/img/katalog/outdoor/'; // Шлях до ваших зображень
+    const numImages = 9; // Кількість зображень
+
+    const classes = [
+        'slower', 'faster', 'slower', 'slower-down', '', 
+        'slower', 'faster1', 'slower2', '', 'slower'
+    ];
+
+    for (let i = 1; i <= numImages; i++) {
+        const wrapper = document.createElement('div');
+        wrapper.classList.add('img-wrapper');
+
+        if (classes[i % classes.length]) {
+            wrapper.classList.add(classes[i % classes.length]);
+        }
+
+        const link = document.createElement('a');
+        link.href = `${imagePath}${i}.jpeg`;
+        link.target = '_blank';
+
+        const img = document.createElement('img');
+        img.src = `${imagePath}${i}.jpeg`;
+        img.alt = `Image ${i}`;
+
+        link.appendChild(img);
+        wrapper.appendChild(link);
+        imageContainer.appendChild(wrapper);
+    }
+}
+
+document.addEventListener('DOMContentLoaded', createImageBlocks);
+</script>
+
+
+
+<footer class="position-relative">
+  <div class="header">
+
+      <!--Waves Container-->
+      <div>
+      <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+      viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+      <defs>
+      <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+      </defs>
+      <g class="parallax">
+      <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(99,77,58,0.7" />
+      <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(99,77,58,0.5)" />
+      <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(99,77,58,0.3)" />
+      <use xlink:href="#gentle-wave" x="48" y="7" fill="#634D3A" />
+      </g>
+      </svg>
+      </div>
+      
+      </div>
+      
+
+  <div class="footerInfo" id="lazy-block">
+    <footer class="py-5">
+      <div class="row">
+        <div class="col-6 col-md-3 mb-3 offset-1">
+          <h5 class="ubuntu-medium" id="contacts">Contacts</h5>
+          <ul class="nav flex-column ">
+            <li class="nav-item mb-2 mt-2"><a href="https://www.google.com/maps/place/Muzey+%22Svitlytsya+Maystra%22/@49.5088589,25.350497,15.88z/data=!4m6!3m5!1s0x473047b833a6eb35:0x420c8db1d557e8f3!8m2!3d49.5133943!4d25.3479571!16s%2Fg%2F11qh1j7_np?entry=ttu&g_ep=EgoyMDI1MDEwNi4xIKXMDSoASAFQAw%3D%3D"  target="_blank" rel="noopener noreferrer" class="nav-link p-0 text-body-secondary">PE Tatarin, Slobidka village, Koziv district, Ternopil region.</a></li>
+            <li class="nav-item mb-2 mt-1"><a href="tel:097-159-39-57" target="_blank" rel="noopener noreferrer" class="nav-link p-0 text-body-secondary">097-159-39-57 (kitchens, bedrooms, wardrobes)<br>097-798-30-88 (doors and windows, garden products)</a></li>
+            <li class="nav-item mb-2 mt-1"><a href="tataryntm@ukr.net" target="_blank" rel="noopener noreferrer" class="nav-link p-0 text-body-secondary">tataryntm@ukr.net</a></li>
+            <li class="nav-item mb-2 mt-1"><a href="#" target="_blank" rel="noopener noreferrer" class="nav-link p-0 text-body-secondary"><i class="bi bi-facebook"></i> Facebook</a></li>
+          </ul>
+        </div>
+  
+        <div class="col-6 col-md-2 mb-3">
+          <h5 class="ubuntu-medium">Vocation</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2 mt-2"><a href="/index_en.html" class="nav-link p-0 text-body-secondary">About us</a></li>
+            <li class="nav-item mb-2 mt-1"><a href="/index_en.html" class="nav-link p-0 text-body-secondary">Showcase</a></li>
+            <li class="nav-item mb-2 mt-1"><a href="/index_en.html" class="nav-link p-0 text-body-secondary">Why we</a></li>
+            <li class="nav-item mb-2 mt-1"><a href="/index_en.html" class="nav-link p-0 text-body-secondary">History</a></li>
+          </ul>
+        </div>
+  
+        <div class="col-6 col-md-2 mb-3">
+          <h5 class="ubuntu-medium">Help</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2 mt-2"><a href="#" class="nav-link p-0 text-body-secondary">Privacy policy</a></li>
+            <li class="nav-item mb-2 mt-1"><a href="#" class="nav-link p-0 text-body-secondary">Cookies</a></li>
+            <li class="nav-item mb-2 mt-1"><a href="#" class="nav-link p-0 text-body-secondary">Terms & conditions</a></li>
+          </ul>
+        </div>
+  
+        <div class="col-md-3 offset-md-1 mb-3 e-0">
+          <img src="/img/footer/horario.png" alt="">
+        </div>
+      </div>
+  
+      <div class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4">
+        <div class="separadorFooter align-items-center"></div>
+        <div class="col-md-4 d-flex align-items-center">
+          <a href="/" class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">
+            <svg class="bi" width="30" height="24"><use xlink:href="#bootstrap"></use></svg>
+          </a>
+          <span class="mb-3 mb-md-0 text-body-secondary" style="margin-left: 5em;">© 2024 Company, Inc</span>
+        </div>
+    
+        <h5 style="margin-right: 6em;">CREATE COMFORT ACCORDING TO A UNIQUE DESIGN</h5>
+      </div>
+
+      
+
+
+
+    </footer>
+  </div>
+</footer>
+
+
+</body>
+</html>

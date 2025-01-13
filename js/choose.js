@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const randomImageNumber = Math.floor(Math.random() * maxImages[randomFolder]) + 1;
 
     // Формування шляху до зображення
-    img.src = `img/katalog/${randomFolder}/${randomImageNumber}.jpeg`;
+    img.src = `/img/katalog/${randomFolder}/${randomImageNumber}.jpeg`;
  // Локальний шлях до зображення
     img.alt = `Random Image ${i + 1}`;
     img.loading = "lazy"; // Ліниве завантаження
@@ -34,6 +34,7 @@ document.addEventListener("DOMContentLoaded", () => {
     container.appendChild(imgDiv);
   }
 });
+
 
 
 
@@ -50,5 +51,49 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
   
-
+// waterfall
+  const observer = new IntersectionObserver(f, {
+    threshold:[0,1]
+  });
   
+  function f(entries) {
+    for (const entry of entries) {
+      if (entry.isIntersecting && entry.intersectionRatio >= 1) {
+        entry.target.classList.toggle("inbound", true)
+      }
+      else {
+        entry.target.classList.toggle("inbound", false)
+      }
+    }
+  }
+  
+  const itemEls = Array.from(document.querySelectorAll(".item"));
+  for (const itemEl of itemEls)
+    observer.observe(itemEl)
+
+
+
+//Двері
+document.addEventListener("DOMContentLoaded", () => {
+  const container = document.getElementById("imageContainer");
+  const folder = "door"; // Назва папки, де зберігаються ваші зображення
+  const numImages = 155; // Максимальна кількість зображень в папці
+
+  // Додаємо зображення в контейнер
+  for (let i = 1; i <= numImages; i++) {
+    const imgDiv = document.createElement("div");
+    imgDiv.classList.add("waterfall"); // Клас для контейнера
+
+    const itemDiv = document.createElement("div");
+    itemDiv.classList.add("item"); // Клас для кожного елемента з зображенням
+
+    const img = document.createElement("img");
+    img.src = `/img/katalog/${folder}/${i}.jpeg`; // Формуємо шлях до зображення
+    img.alt = `Image ${i}`;
+    img.loading = "lazy"; // Ліниве завантаження зображення
+
+    itemDiv.appendChild(img); // Додаємо зображення до елемента .item
+    imgDiv.appendChild(itemDiv); // Додаємо елемент .item до контейнера .waterfall
+    container.appendChild(imgDiv); // Додаємо .waterfall до головного контейнера
+  }
+});

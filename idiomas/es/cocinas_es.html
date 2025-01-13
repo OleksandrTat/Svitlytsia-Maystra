@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ua">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,12 +20,12 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="/css/choose.css">
-    <link rel="stylesheet" href="/css/fonts.css">
-    <link rel="stylesheet" href="/css/gallery.css">
-    <script src="/js/main.js"></script>
-    <script src="/js/choose.js"></script>
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/choose.css">
+    <link rel="stylesheet" href="../../css/fonts.css">
+    <link rel="stylesheet" href="../../css/gallery.css">
+    <script src="../../js/main.js"></script>
+    <script src="../../js/choose.js"></script>
 </head>
 <body>
 
@@ -36,11 +36,11 @@
     <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top navbarTop navbarcss ubuntu-medium">
       <div class="container-fluid navbarcss">
           <!-- Лого з посиланням на верх сторінки -->
-          <a href="#principio" class="logo-link">
-            <img src="/img/LOGO.png" alt="Лого" width="30" height="30">
+          <a href="../../index_es.html" class="logo-link">
+            <img src="../../img/LOGO.png" alt="Лого" width="30" height="30">
           </a>
-          <a href="#principio" class="logo-link">
-              <img src="/img/textSinBG.png" alt="Текст логотипу" class="textlogo" height="30">
+          <a href="../../index_es.html" class="logo-link">
+              <img src="../../img/textSinBG.png" alt="Текст логотипу" class="textlogo" height="30">
           </a>
         
           
@@ -53,22 +53,22 @@
           <div class="collapse navbar-collapse" id="navbarNavDropdown">
               <ul class="navbar-nav ms-auto navItem">
                 <li class="nav-item navItem">
-                  <a id="aboutLink" class="nav-link active" onclick="window.open('/index_es.html', '_self');">Quiénes somos</a>
+                  <a id="aboutLink" class="nav-link active" href="../../index_es.html">Quiénes somos</a>
                 </li>
                 <li class="nav-item navItem">
-                    <a id="showcaseLink" class="nav-link" onclick="window.open('/index_es.html', '_self');">Escaparate</a>
+                    <a id="showcaseLink" class="nav-link" href="../../index_es.html">Escaparate</a>
                 </li>
                 <li class="nav-item navItem">
-                    <a id="whyUsLink" class="nav-link" onclick="window.open('/index_es.html', '_self');">Por qué nosotros</a>
+                    <a id="whyUsLink" class="nav-link" href="../../index_es.html">Por qué nosotros</a>
                 </li>
                 <li class="nav-item navItem">
-                    <a id="historyLink" class="nav-link" onclick="window.open('/index_es.html', '_self');">Historia</a>
+                    <a id="historyLink" class="nav-link" href="../../index_es.html">Historia</a>
                 </li>
                 <li class="nav-item navItem">
                     <a id="contactsLink" class="nav-link" href="#contacts">Contactos</a>
                 </li>
                   <li class="nav-item dropdown navItem">
-                      <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                           <i class="bi bi-globe2"></i>
                       </a>
                       <ul class="dropdown-menu dropdown-menu-end" style="margin-right: 0px !important;">
@@ -116,11 +116,11 @@ function createImageBlocks() {
         }
 
         const link = document.createElement('a');
-        link.href = `${imagePath}${i}.jpeg`;
+        link.href = `../..${imagePath}${i}.jpeg`;
         link.target = '_self';
 
         const img = document.createElement('img');
-        img.src = `${imagePath}${i}.jpeg`;
+        img.src = `../..${imagePath}${i}.jpeg`;
         img.alt = `Image ${i}`;
 
         link.appendChild(img);
@@ -131,7 +131,6 @@ function createImageBlocks() {
 
 document.addEventListener('DOMContentLoaded', createImageBlocks);
 </script>
-
 
 
 
@@ -166,17 +165,17 @@ document.addEventListener('DOMContentLoaded', createImageBlocks);
             <li class="nav-item mb-2 mt-2"><a href="https://www.google.com/maps/place/Muzey+%22Svitlytsya+Maystra%22/@49.5088589,25.350497,15.88z/data=!4m6!3m5!1s0x473047b833a6eb35:0x420c8db1d557e8f3!8m2!3d49.5133943!4d25.3479571!16s%2Fg%2F11qh1j7_np?entry=ttu&g_ep=EgoyMDI1MDEwNi4xIKXMDSoASAFQAw%3D%3D"  target="_self" rel="noopener noreferrer" class="nav-link p-0 text-body-secondary">Tataryn, PE, pueblo de Slobidka,<br> distrito de Koziv, región de Ternopil.</a></li>
             <li class="nav-item mb-2 mt-1"><a href="tel:097-159-39-57" target="_self" rel="noopener noreferrer" class="nav-link p-0 text-body-secondary">097-159-39-57 (cocinas, dormitorios, armarios)<br>097-798-30-88 (puertas y ventanas, productos de jardinería)</a></li>
             <li class="nav-item mb-2 mt-1"><a href="tataryntm@ukr.net" target="_self" rel="noopener noreferrer" class="nav-link p-0 text-body-secondary">tataryntm@ukr.net</a></li>
-            <li class="nav-item mb-2 mt-1"><a href="#" target="_self" rel="noopener noreferrer" class="nav-link p-0 text-body-secondary"><i class="bi bi-facebook"></i> Facebook</a></li>
+            <li class="nav-item mb-2 mt-1"><a href="https://www.facebook.com/share/14zAHPHWRw/" target="_blank" rel="noopener noreferrer" class="nav-link p-0 text-body-secondary"><i class="bi bi-facebook"></i> Facebook</a></li>
           </ul>
         </div>
   
         <div class="col-6 col-md-2 mb-3">
           <h5 class="ubuntu-medium">Vocación</h5>
           <ul class="nav flex-column">
-            <li class="nav-item mb-2 mt-2"><a href="/index_es.html" class="nav-link p-0 text-body-secondary">Quiénes somos</a></li>
-            <li class="nav-item mb-2 mt-1"><a href="/index_es.html" class="nav-link p-0 text-body-secondary">Escaparate</a></li>
-            <li class="nav-item mb-2 mt-1"><a href="/index_es.html" class="nav-link p-0 text-body-secondary">Por qué nosotros</a></li>
-            <li class="nav-item mb-2 mt-1"><a href="/index_es.html" class="nav-link p-0 text-body-secondary">Historia</a></li>
+            <li class="nav-item mb-2 mt-2"><a href="../../index_es.html" class="nav-link p-0 text-body-secondary">Quiénes somos</a></li>
+            <li class="nav-item mb-2 mt-1"><a href="../../index_es.html" class="nav-link p-0 text-body-secondary">Escaparate</a></li>
+            <li class="nav-item mb-2 mt-1"><a href="../../index_es.html" class="nav-link p-0 text-body-secondary">Por qué nosotros</a></li>
+            <li class="nav-item mb-2 mt-1"><a href="../../index_es.html" class="nav-link p-0 text-body-secondary">Historia</a></li>
           </ul>
         </div>
   
@@ -190,7 +189,7 @@ document.addEventListener('DOMContentLoaded', createImageBlocks);
         </div>
   
         <div class="col-md-3 offset-md-1 mb-3 e-0">
-          <img src="/img/footer/horario.png" alt="">
+          <img src="../../img/footer/horario.png" alt="">
         </div>
       </div>
   

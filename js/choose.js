@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const randomImageNumber = Math.floor(Math.random() * maxImages[randomFolder]) + 1;
 
     // Формування шляху до зображення
-    img.src = `/img/katalog/${randomFolder}/${randomImageNumber}.jpeg`;
+    img.src = `../../img/katalog/${randomFolder}/${randomImageNumber}.jpeg`;
  // Локальний шлях до зображення
     img.alt = `Random Image ${i + 1}`;
     img.loading = "lazy"; // Ліниве завантаження

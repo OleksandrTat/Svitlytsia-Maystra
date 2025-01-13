@@ -151,56 +151,64 @@ body, html{
 
 
 
-.img-container-waterfall{
-  display:grid;
-  place-content:center;
-}
-
-.waterfall {
-  --h1: 30vh;
-  --h2: 40vh;
-  --h3: 50vh;
-  --gcd: 10vh;
-  --width: minmax(150px, 1fr);
-  
-  width: 80vw;
-  margin: 10em 0;
-  
-  display: grid;
-  grid-template-columns: repeat(auto-fill, var(--width));
-  grid-gap: 1em;
-  grid-auto-flow: row dense;
-  grid-auto-rows: var(--gcd);
-
-  /* Usando el cálculo manual */
-  .item:nth-of-type(3n+1) { grid-row: auto / span calc(var(--h1) / var(--gcd)); }
-  .item:nth-of-type(3n+2) { grid-row: auto / span calc(var(--h2) / var(--gcd)); }
-  .item:nth-of-type(3n+3) { grid-row: auto / span calc(var(--h3) / var(--gcd)); }
-  
-  .item {
-      overflow: hidden;
-      transform: rotate(-7.5deg);
-      filter: saturate(0) contrast(10) brightness(0.2);
-      transition: transform 0.2s, border 0.1s;
-      box-sizing: border-box;
-      border: 1em solid transparent;
-      
-      & img {
-          width: 100%; 
-          height: 100%; 
-          object-fit: cover;
-          transform: rotate(15deg);
-          transition: all 0.3s;
-      }
-      
-      &.inbound {
-          transform: rotate(0);
-          filter: none;
-          border-bottom: 1px solid white;
-          
-          & img {
-              transform: rotate(0);
-          }
-      }
+  .img-container-waterfall {
+    display: grid;
+    place-content: center;
   }
-}
+  
+  .waterfall {
+    --h1: 30vh;
+    --h2: 40vh;
+    --h3: 50vh;
+    --gcd: 10vh;
+    --width: minmax(150px, 1fr);
+  
+    width: 80vw;
+    margin: 10em 0;
+  
+    display: grid;
+    grid-template-columns: repeat(auto-fill, var(--width));
+    gap: 1em;
+    grid-auto-flow: row dense;
+    grid-auto-rows: var(--gcd);
+  }
+  
+  .waterfall .itemwater:nth-of-type(3n+1) {
+    grid-row: auto / span calc(var(--h1) / var(--gcd));
+  }
+  
+  .waterfall .itemwater:nth-of-type(3n+2) {
+    grid-row: auto / span calc(var(--h2) / var(--gcd));
+  }
+  
+  .waterfall .itemwater:nth-of-type(3n+3) {
+    grid-row: auto / span calc(var(--h3) / var(--gcd));
+  }
+  
+  .waterfall .itemwater {
+    overflow: hidden;
+    transform: rotate(-7.5deg);
+    filter: saturate(0) contrast(10) brightness(0.2);
+    transition: transform 0.2s, border 0.1s;
+    box-sizing: border-box;
+    border: 1em solid transparent;
+  }
+  
+  .waterfall .itemwater img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: rotate(15deg);
+    transition: all 0.3s;
+  }
+  
+  .waterfall .itemwater.inbound {
+    transform: rotate(0);
+    filter: none;
+    border-bottom: 1px solid white;
+  }
+  
+  .waterfall .itemwater.inbound img {
+    transform: rotate(0);
+  }
+  

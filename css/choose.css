@@ -140,6 +140,19 @@ body, html{
     color: #391c02;
     opacity: 0.7;
   }
+
+  .sectext{
+    width: 100%;
+    position: absolute;
+    top: 12vh;
+    font-size: 1.5rem; /* Розмір тексту */
+    line-height: 1.2; /* Висота рядка */
+    display: flex; /* Використання flex для вирівнювання */
+    justify-content: center; /* Вирівнювання по центру */
+    align-items: center;
+    color: #111;
+    opacity: 0.7;
+  }
   
   .first-letter img {
     width: 1em; /* Встановлює ширину зображення рівну висоті тексту */

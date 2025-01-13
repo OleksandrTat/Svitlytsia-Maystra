@@ -23,6 +23,7 @@
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/choose.css">
     <link rel="stylesheet" href="/css/fonts.css">
+    <link rel="stylesheet" href="/css/gallery.css">
     <script src="/js/main.js"></script>
     <script src="/js/choose.js"></script>
 </head>
@@ -86,6 +87,7 @@
 
 
   <!-- Текст -->
+  <h3 class="sectext ubuntu-bold text-center">категорія</h3>
   <h1 class="maintext ubuntu-bold text-center">
     <!-- <span class="first-letter">
       <img src="/img/LOGO.png" alt="O" class="letter-image" loading="lazy">
@@ -94,10 +96,55 @@
   </h1>
 
 
-  <div class="img-container-waterfall">
-    <div id="imageContainerWater" class="waterfall"></div>
+  <div class="external">
+    <div class="horizontal-scroll-wrapper" id="image-container">
+        <!-- Блоки з зображеннями будуть додаватися сюди за допомогою JS -->
+    </div>
   </div>
-  
+
+<script>
+// Функція для створення блоків з зображеннями
+function createImageBlocks() {
+    const imageContainer = document.getElementById('image-container');
+    const imagePath = '/img/katalog/door/'; // Шлях до ваших зображень
+    const numImages = 155; // Кількість зображень, можете змінити на вашу кількість
+
+    // Масив з класами, які потрібно застосувати до кожного блоку з зображенням
+    const classes = [
+        'slower', 'faster', 'slower', 'slower-down', '', 
+        'slower', 'faster1', 'slower2', '', 'slower'
+    ];
+
+    // Створення блоків з зображеннями
+    for (let i = 1; i <= numImages; i++) {
+        const wrapper = document.createElement('div'); // Створюємо блок для зображення
+        wrapper.classList.add('img-wrapper'); // Додаємо клас для стилізації
+
+        // Додаємо клас з масиву за індексом
+        if (classes[i % classes.length]) {
+            wrapper.classList.add(classes[i % classes.length]);
+        }
+
+        const link = document.createElement('a'); // Створюємо посилання
+        link.href = `${imagePath}${i}.jpeg`; // Встановлюємо посилання на зображення
+        link.target = '_blank'; // Відкривається в новій вкладці
+
+        const img = document.createElement('img'); // Створюємо елемент зображення
+        img.src = `${imagePath}${i}.jpeg`; // Встановлюємо джерело зображення
+        img.alt = `Image ${i}`; // Встановлюємо опис зображення
+
+        // Додаємо зображення в посилання
+        link.appendChild(img);
+        // Додаємо посилання в контейнер
+        wrapper.appendChild(link);
+        // Додаємо блок з зображенням в контейнер
+        imageContainer.appendChild(wrapper);
+    }
+}
+
+// Викликаємо функцію після завантаження сторінки
+document.addEventListener('DOMContentLoaded', createImageBlocks);
+</script>
 
 
 

@@ -22,3 +22,51 @@
     font-style: normal;
   }
   
+
+
+
+
+  a{
+    color: #FFEDE2;
+  }
+  
+  .cookies-popup {
+    position: fixed;
+    bottom: 15px;
+    left: 20px;
+    right: 20px;
+    background: #fffaf7;
+    color: #5a3e2e;
+    padding: 15px 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    opacity: 1;
+    transition: opacity 0.5s ease-out;
+}
+
+.cookies-popup.hidden {
+    opacity: 0;
+}
+
+.cookies-popup p {
+    margin: 0;
+    font-size: 14px;
+    color: #5a3e2e;
+}
+
+.cookies-popup button {
+    background: #fbd1a2;
+    color: #5a3e2e;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.cookies-popup button:hover {
+    background: #edc393;
+}

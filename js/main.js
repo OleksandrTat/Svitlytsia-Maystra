@@ -142,4 +142,11 @@ $(document).ready(function () {
 
 
 
-
+//Прийняти Coockies
+function acceptCookies() {
+    const popup = document.getElementById("cookiesPopup");
+    popup.classList.add("hidden");
+    setTimeout(() => {
+        popup.style.display = "none";
+    }, 500);
+}

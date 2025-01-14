@@ -84,9 +84,12 @@
   <div>
           
         <div class="mainbg"></div>
-          <h2 class="ubuntu-bold texto-principal" data-parallax-layer="4">Estamos orgullosos de continuar la labor de nuestros  <span class="darkbrown">abuelos y bisabuelos.</span> </h2>
-          <h6 class="ubuntu-medium texto-principalmas" data-parallax-layer="4">Utilización de modernas tecnologías de transformación de la madera. Nos basamos en nuestra propia experiencia y diseñamos nuevos productos.<br><br>Fabricamos la mayoría de nuestros productos por encargo, por lo que un enfoque individualizado es un factor clave para el éxito de las relaciones con los clientes. Teniendo en cuenta los deseos de nuestros clientes, creamos muebles realmente de<span class="darkbrown"> alta calidad, modernos y prácticos.</span></h6>
-          <div class="VV" data-parallax-layer="1">
+        <h2 class="ubuntu-bold texto-principal contenido" data-parallax-layer="4">
+          Estamos orgullosos de continuar la labor de nuestros  <span class="darkbrown">abuelos y bisabuelos.</span>
+      </h2>
+      
+          <h6 class="ubuntu-medium texto-principalmas contenido" data-parallax-layer="4">Utilización de modernas tecnologías de transformación de la madera. Nos basamos en nuestra propia experiencia y diseñamos nuevos productos.<br><br>Fabricamos la mayoría de nuestros productos por encargo, por lo que un enfoque individualizado es un factor clave para el éxito de las relaciones con los clientes. Teniendo en cuenta los deseos de nuestros clientes, creamos muebles realmente de<span class="darkbrown"> alta calidad, modernos y prácticos.</span></h6>
+          <div class="VV fondo">
               <div class="leftVleft stripe"></div>
               <div class="leftVright stripe"></div>
 
@@ -97,7 +100,7 @@
             <button type="button" class="ubuntu-bold btn btn-outline-light btn-lg btnPrincipal">Seguir leyendo</button>
           </a>
 
-          <img src="img/img principales.png" class="imgPrincimales" data-parallax-layer="2">
+          <img src="img/img principales.png" class="imgPrincimales d-none d-xxl-block" data-parallax-layer="2">
           <div class="VVbg"></div>
 
           
@@ -106,33 +109,34 @@
 
   <!-- Про нас -->
   <div class="container aboutUs my-5 hidden" id="about-us">
-      <div class="row align-items-center offset-2">
-        <!-- Блок із зображенням -->
-        <div class="col-12 col-md-4 text-center d-flex justify-content-center">
-          <img src="img/aboutUs.png" class="img-fluid rounded" alt="Quiénes somos" style="height: 100%; max-height: 350px; object-fit: cover;">
-        </div>
-        
-        <!-- Блок із текстом -->
-        <div class="col-12 col-md-6">
-          <h2 class="AboutUsH2 lxgw-wenkai-tc-regular fs-1 text-end mb-3">Quiénes somos</h2>
-          <div class="AboutUsSeparador mb-4"></div>
-          <p class="fs-6 AboutUsPTop lxgw-wenkai-tc-regular mb-4">
-            Desarrollamos y aplicamos diseños únicos de muebles modernos que tienen una amplia gama de aplicaciones para el hogar y la empresa.
-            <br><br>
-            Un enfoque serio, artesanos cualificados y una producción automatizada nos permiten fabricar muebles de élite de alta calidad, desde la clase económica hasta la superior. Los muebles de los armarios se fabrican únicamente según bocetos individuales, lo que los hace 100% exclusivos.
-            </p>
-        </div>
-        <p class="fs-6 AboutUsPBottom lxgw-wenkai-tc-regular text-center col-md-10">
-          Hemos recibido muchas recomendaciones positivas de nuestros clientes a lo largo de los años y no vamos a detenernos ahí.
-          Los productos cumplen las normas exigidas. Cooperamos con fabricantes de renombre de componentes de alta calidad.
+    <div class="row align-items-center offset-2">
+      <!-- Блок із зображенням -->
+      <div class="col-12 col-md-4 text-center d-flex justify-content-center">
+        <img src="img/aboutUs.png" class="img-fluid rounded" alt="Quiénes somos" style="height: 100%; max-height: 350px; object-fit: cover;">
+      </div>
+      
+      <!-- Блок із текстом -->
+      <div class="col-12 col-md-6">
+        <h2 class="AboutUsH2 lxgw-wenkai-tc-regular fs-1 text-end mb-3">Quiénes somos</h2>
+        <div class="AboutUsSeparador mb-4"></div>
+        <p class="fs-6 AboutUsPTop lxgw-wenkai-tc-regular mb-4">
+          Desarrollamos y aplicamos diseños únicos de muebles modernos que tienen una amplia gama de aplicaciones para el hogar y la empresa.
+          <br><br>
+          Un enfoque serio, artesanos cualificados y una producción automatizada nos permiten fabricar muebles de élite de alta calidad, desde la clase económica hasta la superior. Los muebles de los armarios se fabrican únicamente según bocetos individuales, lo que los hace 100% exclusivos.
         </p>
       </div>
+      <p class="fs-6 AboutUsPBottom lxgw-wenkai-tc-regular text-center col-md-10">
+        Hemos recibido muchas recomendaciones positivas de nuestros clientes a lo largo de los años y no vamos a detenernos ahí.
+        Los productos cumplen las normas exigidas. Cooperamos con fabricantes de renombre de componentes de alta calidad.
+      </p>
+    </div>
   </div>
+  
 
   <!-- Вітрина -->
   <div>
       <div>
-        <img class="bgComprar hidden" id="comprar" src="img/bgComprar.png" alt="Nuestro escaparate" >
+        <img class="bgComprar hidden d-none d-xl-block" id="comprar" src="img/bgComprar.png" alt="Nuestro escaparate" >
         <button type="button" class="btn btn-outline-secondary btnComprar ubuntu-medium hidden" onclick="window.open('idiomas/es/Chose_es.html', '_self');">Nuestro escaparate</button>
       </div>
 
@@ -174,70 +178,73 @@
 
   <!-- Чим ми відрізняємось -->
   <div class="diferencia">
-      <img src="img/WhyWeAreDifferent/TopWave.png" class="diferenciaTopWave">
-      <div class="bg">
-        <div class="container" id="diferencia">
-          <div class="row hidden">
-            <!-- Блок із текстом -->
-          <div class="col-12 col-md-5 offset-2">
-            <h2 class="diferenciaH2 lxgw-wenkai-tc-regular fs-1 text-start mb-3">Lo que nos diferencia</h2>
+    <img src="img/WhyWeAreDifferent/TopWave.png" class="diferenciaTopWave">
+    <div class="bg">
+      <div class="container" id="diferencia">
+        <div class="row">
+          <!-- Блок із текстом -->
+          <div class="col-12 col-md-5 offset-md-1">
+            <h2 class="diferenciaH2 lxgw-wenkai-tc-regular fs-1 text-md-start mb-3">Lo que nos diferencia</h2>
             <div class="differenciaSeparador mb-4"></div>
-            <p class="fs-6 differenceP lxgw-wenkai-tc-regular mb-4">
+            <p class="fs-6 differenceP lxgw-wenkai-tc-regular mb-4 text-md-start text-center">
               "Svitlytsia Maistra" es su socio en la creación de muebles y puertas de madera. Desarrollamos productos fiables y duraderos que combinan armoniosamente estilo y funcionalidad, creando confort en su espacio.<br><br>Nuestras ventajas son unos precios asequibles, una entrega rápida y fiable, materiales de calidad y un rápido cumplimiento de los pedidos. Al elegir "Svitlytsia Mestra", no solo obtendrá productos, ¡sino auténtica artesanía que le servirá durante muchos años!
             </p>
           </div>
   
-            <!-- Блок із зображенням -->
-          <div class="col-12 col-md-4 text-center d-flex justify-content-center">
-            <img src="img/WhyWeAreDifferent/mainimg.png" class="img-fluid" alt="Чим ми відрізняємося" style="height: 100%; max-height: 350px; object-fit: cover;">
-          </div>
+          <!-- Блок із зображенням -->
+          <div class="col-12 col-md-6 text-center d-flex justify-content-center">
+            <img src="img/WhyWeAreDifferent/mainimg.png" class="img-fluid" alt="Чим ми відрізняємося" style="object-fit: cover; max-height: 350px;">
           </div>
         </div>
       </div>
-      <img src="img/WhyWeAreDifferent/BottomWave.png" class="diferenciaBottomWave">
+    </div>
+    <img src="img/WhyWeAreDifferent/BottomWave.png" class="diferenciaBottomWave">
   </div>
+  
 
   <!-- Історія -->
   <div class="position-relative" style="top: -10vh;">
     <!-- Перший блок -->
-    <div class="row align-items-center offset-3 hidden" id="history">
-      <!-- Блок із зображенням -->
-      <div class="col-12 col-md-4 text-center d-flex" style="margin-left: -2em;">
-        <img src="img/Historia/mainImg1.png" class="img-fluid rounded" alt="Про нас" style="height: 100%; max-height: 350px; object-fit: cover;">
-      </div>
+    <div class="row align-items-center offset-md-3 hidden" id="history">
+        <!-- Блок із зображенням -->
+        <div class="col-12 col-md-4 text-center d-flex justify-content-center" style="margin-left: -2em;">
+            <img src="img/Historia/mainImg1.png" class="img-fluid rounded" alt="Про нас" style="height: 100%; max-height: 350px; object-fit: cover;">
+        </div>
       
-      <!-- Блок із текстом -->
-      <div class="col-12 col-md-5">
-        <h2 class="HistoriaH2 lxgw-wenkai-tc-regular fs-1 text-end mb-3">Nuestra historia</h2>
-        <div class="HistoriaSeparador mb-4"></div>
-        <p class="fs-6 AboutUsPTop lxgw-wenkai-tc-regular mb-4 text-start">
-          Los productos de madera se conocen en Ucrania desde la antigüedad, sobre todo en las zonas donde la madera era el material principal. Utensilios, herramientas, barcos, utensilios domésticos, etc. se fabricaban con madera. Los métodos más antiguos de transformación de la madera que han llegado hasta nuestros días son la quema y la extracción.<br><br>La madera ha sido durante mucho tiempo uno de los materiales favoritos y valiosos. Es fuerte y resistente y tiene un bajo peso específico. Los tintes, aceites y barnices protegen de forma fiable los productos de madera del agua y, al mismo tiempo, mejoran la calidad de la madera.
-          </p>
-      </div>
-      <p class="fs-6 AboutUsPBottom lxgw-wenkai-tc-regular text-center col-md-8 offset-5">
-        El profundo conocimiento de las propiedades de la madera y otros materiales siempre ha sido la base inalterable del arte popular.
-      </p>
+        <!-- Блок із текстом -->
+        <div class="col-12 col-md-5">
+            <h2 class="HistoriaH2 lxgw-wenkai-tc-regular fs-1 text-md-end mb-3">Nuestra historia</h2>
+            <div class="HistoriaSeparador mb-4"></div>
+            <p class="fs-6 AboutUsPTop lxgw-wenkai-tc-regular mb-4 text-md-start text-center">
+                Los productos de madera se conocen en Ucrania desde la antigüedad, sobre todo en las zonas donde la madera era el material principal. Utensilios, herramientas, barcos, utensilios domésticos, etc. se fabricaban con madera. Los métodos más antiguos de transformación de la madera que han llegado hasta nuestros días son la quema y la extracción.<br><br>La madera ha sido durante mucho tiempo uno de los materiales favoritos y valiosos. Es fuerte y resistente y tiene un bajo peso específico. Los tintes, aceites y barnices protegen de forma fiable los productos de madera del agua y, al mismo tiempo, mejoran la calidad de la madera.
+            </p>
+        </div>
+        <p class="fs-6 AboutUsPBottom lxgw-wenkai-tc-regular text-center col-md-8 offset-md-5">
+            El profundo conocimiento de las propiedades de la madera y otros materiales siempre ha sido la base inalterable del arte popular.
+        </p>
     </div>
 
     <!-- Другий блок -->
-      <div class="bg hidden" style="margin-top: 2em;">
+    <div class="bg hidden" style="margin-top: 2em;">
         <div class="container" id="diferencia">
-          <div class="row">
-            <!-- Блок із текстом -->
-          <div class="col-12 col-md-4 offset-2" style="margin-right: -2em;">
-            <p class="fs-6 differenceP lxgw-wenkai-tc-regular mb-4">
-              Nuestros talleres de producción están dotados de todo el equipamiento necesario, moderno y fiable, que nos permite prestar una amplia gama de servicios y fabricar una gran variedad de productos. En nuestra producción utilizamos diferentes tipos de madera, seleccionamos y comprobamos cuidadosamente las materias primas y, a continuación, llevamos a cabo todas las fases de trabajo necesarias. Al ser fabricantes, nuestros precios se comparan favorablemente con los de otras empresas que ofrecen muebles de madera natural. Los productos de madera son uno de nuestros principales negocios, por lo que garantizamos una alta calidad del producto final.
-              </p>
-          </div>
-  
-            <!-- Блок із зображенням -->
-          <div class="col-12 col-md-4 text-center d-flex justify-content-center">
-            <img src="img/Historia/mainImg2.png" class="img-fluid" alt="Чим ми відрізняємося" style="height: 100%; max-height: 350px; object-fit: cover; margin-right: 0m;">
-          </div>
-          </div>
+            <div class="row">
+                <!-- Блок із текстом -->
+                <div class="col-12 col-md-4 offset-md-2" style="margin-right: -2em;">
+                    <p class="fs-6 differenceP lxgw-wenkai-tc-regular mb-4">
+                        Nuestros talleres de producción están dotados de todo el equipamiento necesario, moderno y fiable, que nos permite prestar una amplia gama de servicios y fabricar una gran variedad de productos. En nuestra producción utilizamos diferentes tipos de madera, seleccionamos y comprobamos cuidadosamente las materias primas y, a continuación, llevamos a cabo todas las fases de trabajo necesarias. Al ser fabricantes, nuestros precios se comparan favorablemente con los de otras empresas que ofrecen muebles de madera natural. Los productos de madera son uno de nuestros principales negocios, por lo que garantizamos una alta calidad del producto final.
+                    </p>
+                </div>
+        
+                <!-- Блок із зображенням -->
+                <div class="col-12 col-md-4 text-center d-flex justify-content-center">
+                    <img src="img/Historia/mainImg2.png" class="img-fluid" alt="Чим ми відрізняємося" style="height: 100%; max-height: 350px; object-fit: cover; margin-right: 0;">
+                </div>
+            </div>
         </div>
-      </div>
-  </div>
+    </div>
+</div>
+
+
 
   <!-- Сніг -->
   <div id="snowflakes"></div> 
@@ -290,13 +297,13 @@
             <h5 class="ubuntu-medium" id="contacts">Contacte con</h5>
             <ul class="nav flex-column ">
               <li class="nav-item mb-2 mt-2"><a href="https://www.google.com/maps/place/Muzey+%22Svitlytsya+Maystra%22/@49.5088589,25.350497,15.88z/data=!4m6!3m5!1s0x473047b833a6eb35:0x420c8db1d557e8f3!8m2!3d49.5133943!4d25.3479571!16s%2Fg%2F11qh1j7_np?entry=ttu&g_ep=EgoyMDI1MDEwNi4xIKXMDSoASAFQAw%3D%3D"  target="_self" rel="noopener noreferrer" class="nav-link p-0 text-body-secondary">PE Tatarin, pueblo de Slobidka,<br>Distrito de Koziv, región de Ternopil.</a></li>
-              <li class="nav-item mb-2 mt-1"><a href="tel:097-159-39-57" target="_self" rel="noopener noreferrer" class="nav-link p-0 text-body-secondary">097-159-39-57 (cocinas, dormitorios, armarios)<br>097-798-30-88 (puertas y ventanas, productos de jardinería)</a></li>
-              <li class="nav-item mb-2 mt-1"><a href="tataryntm@ukr.net" target="_self" rel="noopener noreferrer" class="nav-link p-0 text-body-secondary">tataryntm@ukr.net</a></li>
-              <li class="nav-item mb-2 mt-1"><a href="https://www.facebook.com/share/1WbChce8Rh/" target="_self" rel="noopener noreferrer" class="nav-link p-0 text-body-secondary"><i class="bi bi-facebook"></i> Facebook</a></li>
+              <li class="nav-item mb-2 mt-1"><a href="tel:097-159-39-57" target="_blank" rel="noopener noreferrer" class="nav-link p-0 text-body-secondary">097-159-39-57 (cocinas, dormitorios, armarios)<br>097-798-30-88 (puertas y ventanas, productos de jardinería)</a></li>
+              <li class="nav-item mb-2 mt-1"><a href="tataryntm@ukr.net" target="_blank" rel="noopener noreferrer" class="nav-link p-0 text-body-secondary">tataryntm@ukr.net</a></li>
+              <li class="nav-item mb-2 mt-1"><a href="https://www.facebook.com/share/1WbChce8Rh/" target="_self" rel="noopener noreferrer" class="nav-link p-0 text-body-secondary"><i class="bi bi-facebook" target="_blank"></i> Facebook</a></li>
             </ul>
           </div>
     
-          <div class="col-6 col-md-2 mb-3">
+          <div class="col-6 col-md-2 offset-1 mb-2">
             <h5 class="ubuntu-medium">Vocaciónes</h5>
             <ul class="nav flex-column">
               <li class="nav-item mb-2 mt-2"><a href="#about-us" class="nav-link p-0 text-body-secondary">Quiénes somos</a></li>
@@ -306,7 +313,7 @@
             </ul>
           </div>
     
-          <div class="col-6 col-md-2 mb-3">
+          <div class="col-6 col-md-1 offset-1 mb-1">
             <h5 class="ubuntu-medium">Help</h5>
             <ul class="nav flex-column">
               <li class="nav-item mb-2 mt-2"><a href="#" class="nav-link p-0 text-body-secondary">Privacy policy</a></li>

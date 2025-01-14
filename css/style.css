@@ -2,6 +2,7 @@
 
 html {
     scroll-behavior: smooth;
+    width: 100vw;
 }
 
 body {
@@ -73,7 +74,7 @@ body {
     background-color: #E3C1A3;
     position: absolute;
     top: 0;
-    z-index: -1;
+    z-index: -3;
 }
 .VVbg{
     width: 100vw;
@@ -83,11 +84,30 @@ body {
     top: 100vh;
 }
 
-.texto-principal{
+.VV {
+    position: relative; /* Додайте позиціонування, якщо його немає */
+    z-index: -2; /* Значення z-index менше за інші елементи */
+    top: 20vh;
+    height: 50vh;
+}
+
+.texto-principal {
     width: 16em;
     margin: 17vh 5vw 10vh;
     color: #634D3A;
     font-size: 2.5em;
+}
+
+@media (max-width: 768px) { /* Для екранів менше 768px */
+    .texto-principal {
+        width: 14em;
+    }
+}
+
+@media (max-width: 768px) {
+    .texto-principalmas {
+        width: 20em; /* Ще більше зменшуємо ширину для малих екранів */
+    }
 }
 
 .darkbrown{
@@ -96,7 +116,7 @@ body {
 
 .texto-principalmas{
     width: 28em;
-    margin: 0 5vw 10vh;
+    margin: 0 5vw -20em;
     color: #634D3A;
 }
 
@@ -185,13 +205,12 @@ a {
 
 
 
-
-.aboutUs{
+.aboutUs {
     position: relative;
-    top: 60vh;
+    top: 60vh; /* Розташування з деяким відступом від верху */
 }
 
-.AboutUsH2{
+.AboutUsH2 {
     color: #634D3A;
     margin-right: 1em;
     margin-top: -1em;
@@ -209,12 +228,56 @@ a {
     margin: 1em 0;
 }
 
-.AboutUsSeparador{
+.AboutUsSeparador {
     height: 0.4em;
     width: 100%;
     background-color: #C2845D;
     border-radius: 3em;
 }
+
+/* Оптимізація для мобільних пристроїв */
+@media (max-width: 768px) {
+    .AboutUsH2 {
+        margin-top: 1em;
+        font-size: 1.8rem; /* Зменшуємо розмір заголовка */
+        text-align: center; /* Вирівнюємо заголовок по центру */
+    }
+
+    .AboutUsPTop, .AboutUsPBottom {
+        font-size: 1rem; /* Зменшуємо розмір шрифта для мобільних пристроїв */
+        margin: 0 0.5em; /* Зменшуємо відступи */
+    }
+
+    .AboutUsSeparador {
+        width: 100%; /* Зменшуємо ширину роздільника */
+        margin: 0 auto; /* Центруємо роздільник */
+    }
+
+    .aboutUs {
+        top: 50vh; /* Змінюємо відстань для мобільних пристроїв */
+    }
+}
+
+/* Для великих екранів (понад 1200px) */
+@media (min-width: 1200px) {
+    .AboutUsH2 {
+        font-size: 2.5rem; /* Збільшуємо шрифт заголовка для великих екранів */
+    }
+
+    .AboutUsPTop, .AboutUsPBottom {
+        font-size: 1.2rem; /* Збільшуємо розмір тексту для великих екранів */
+    }
+
+    .AboutUsSeparador {
+        width: 100%; /* Зменшуємо ширину роздільника для великих екранів */
+        margin: 1.5em auto; /* Центруємо роздільник і додаємо відступи */
+    }
+
+    .aboutUs {
+        top: 65vh; /* Відстань для великих екранів */
+    }
+}
+
 
 
 
@@ -225,9 +288,9 @@ a {
     position: relative;
     top: 100vh;
 }
-
 .btnComprar {
-    width: 25vw;
+    width: auto; /* Автоматична ширина кнопки */
+    max-width: auto; /* Максимальна ширина для великих екранів */
     position: relative;
     left: 35vw;
     top: 82vh;
@@ -237,8 +300,12 @@ a {
     border-radius: 0.7em;
     font-size: 2em;
     transition: all 0.3s ease;
+    white-space: nowrap; /* Забороняє перенос рядка */
+    text-overflow: ellipsis; /* Додає три крапки, якщо текст обрізається */
+    padding: 0.5em 1em; /* Відступи для кращого вигляду */
 }
 
+/* Зміна кольору при наведенні */
 .btnComprar:hover {
     background-color: #d99c76;
     color: #FFEDE2;
@@ -249,11 +316,12 @@ a {
 
 /* Ефект при натисканні */
 .btnComprar:active {
-    background-color: #c58f6d !important; /* Трохи темніший відтінок */
-    box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.3) inset; /* Внутрішня тінь для ефекту натискання */
-    transform: scale(0.98); /* Легке стиснення */
+    background-color: #c58f6d !important;
+    box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.3) inset;
+    transform: scale(0.98);
 }
 
+/* Ефект фокусу */
 .btnComprar:focus::after {
     content: '';
     position: absolute;
@@ -269,12 +337,6 @@ a {
     z-index: -1;
 }
 
-@keyframes ripple {
-    to {
-        transform: translate(-50%, -50%) scale(1);
-        opacity: 0;
-    }
-}
 
 
 
@@ -340,46 +402,46 @@ a {
 
 
 
-.diferencia{
+.diferencia {
     position: relative;
     top: -60vh;
-}
-
-.diferenciaTopWave{
-    width: 100vw;
+  }
+  
+  .diferenciaTopWave {
+    width: 100%;
     height: auto;
     margin-bottom: -1em;
-}
-
-.diferencia .bg{
+  }
+  
+  .diferencia .bg {
     background-color: #FFFCF9;
-    padding: 20vh 0;
-
-}
-
-.diferenciaH2{
+    padding: 10vh 0; /* Зменшення padding для адаптивності */
+  }
+  
+  .diferenciaH2 {
     color: #634D3A;
     margin-left: 0.3em;
-}
-
-.differenceP{    
+  }
+  
+  .differenceP {
     color: #634D3A;
     line-height: 1.4em;
     margin: 0 1em;
-    text-align: end;
-}
-
-.differenciaSeparador{
+    text-align: center; /* Центрування тексту на малих екранах */
+  }
+  
+  .differenciaSeparador {
     height: 0.4em;
     width: 100%;
     border-radius: 3em;
     background-color: #724D3C;
-}
-
-.diferenciaBottomWave{
-    width: 100vw;
+  }
+  
+  .diferenciaBottomWave {
+    width: 100%;
     height: auto;
-}
+  }
+  
 
 .nav-link.active {
     font-weight: bold;
@@ -389,19 +451,31 @@ a {
 
 
 
-.HistoriaSeparador{
+.HistoriaSeparador {
     height: 0.4em;
     width: 95%;
     background-color: #C2845D;
     border-radius: 3em;
 }
 
-.HistoriaH2{
+.HistoriaH2 {
     color: #634D3A;
     margin-right: 1em;
-    margin-top: -1em;
-
 }
+
+.differenceP {
+    color: #634D3A;
+    line-height: 1.4em;
+    margin: 0 1em;
+    text-align: center; /* Центрування тексту на малих екранах */
+}
+
+@media (min-width: 768px) {
+    .differenceP {
+        text-align: start; /* Ліве вирівнювання на великих екранах */
+    }
+}
+
 
 
 
